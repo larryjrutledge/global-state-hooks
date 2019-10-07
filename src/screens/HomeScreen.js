@@ -4,7 +4,7 @@ import { View, Text, Button } from 'react-native'
 import { useStore, connect } from 'src/config/Store'
 
 const HomeScreen = props => {
-  // const [state, dispatch] = useStore()
+  // const store = useStore()
 
   return (
     <View
@@ -15,6 +15,7 @@ const HomeScreen = props => {
         backgroundColor: props.theme.backgroundColor
       }}
     >
+      {/* <Text style={{ color: store.state.theme.styles.primaryColor }}> */}
       <Text style={{ color: props.theme.primaryColor }}>HOME SCREEN</Text>
       <Button title="Get BLOG" onPress={() => props.blogFetch('')} />
 
@@ -36,6 +37,7 @@ const HomeScreen = props => {
       <Button
         title="Bright Yellow Theme"
         onPress={() => props.changeTheme('bright_yellow')}
+        // onPress={() => store.actions.changeTheme('bright_yellow')}
       />
     </View>
   )
