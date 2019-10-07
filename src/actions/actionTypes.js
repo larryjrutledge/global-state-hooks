@@ -1,0 +1,8 @@
+const actionTypes = {
+  CHANGE_THEME: 'CHANGE_THEME',
+
+  BLOG_FETCH_INITIAL: 'BLOG_FETCH_INITIAL',
+  BLOG_FETCH_SUCCESS: 'BLOG_FETCH_SUCCESS'
+}
+
+export default actionTypes
