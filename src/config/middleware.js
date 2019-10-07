@@ -4,6 +4,7 @@ import actionTypes from 'src/actions/actionTypes'
 const applyMiddleware = dispatch => action => {
   switch (action.type) {
     case actionTypes.BLOG_FETCH_INITIAL:
+      // hard coded url for testing. Should use URL passed through in action
       axios
         .get('http://api.plos.org/search?q=title:DNA')
         .then(serverResponse =>
